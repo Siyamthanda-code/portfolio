@@ -692,7 +692,7 @@ header .navbar ul li a:hover {
   height: 4.5rem;
   width: 100%;
   padding-left: 1rem;
-  background: #032B44;
+  background: #010124;
   color: #FFF;
 }
 .work .box-container .box .content .tag h3 {
@@ -727,7 +727,7 @@ header .navbar ul li a:hover {
   margin-right: 2rem;
 }
 .work .desc .btns .btn:hover {
-  background: #da0416;
+  background: #010124;
 }
 .work .viewall {
   display: flex;
