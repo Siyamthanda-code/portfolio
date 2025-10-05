@@ -1228,3 +1228,102 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* certifications section starts */
+.certifications {
+  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  min-height: 80vh;
+}
+.certifications .heading {
+  color: #ffffff; 
+}
+.certifications .heading span {
+  color: #ffcc00; 
+}
+.certifications .qoute {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #ffffff; /* White text for better contrast */
+}
+.certifications .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.certifications .box-container .box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+}
+.certifications .box-container .box:hover {
+  transform: scale(1.03);
+  box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+.certifications .box-container .box .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  flex: 1 1 70rem;
+}
+.certifications .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #012970; /* Dark blue for certification name */
+  padding: 0.5rem 0;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 1rem;
+}
+.certifications .box-container .box .content p {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
+  color: #333333; /* Dark gray for organization name */
+}
+.certifications .box-container .box .content .credential-link {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #57059e; /* Dark purple to match gradient */
+  text-decoration: none;
+  font-weight: 600;
+}
+.certifications .box-container .box .content .credential-link:hover {
+  text-decoration: underline;
+  color: #4a00e0; /* Lighter purple on hover */
+}
+.certifications .box-container .box .content .credential-link i {
+  margin-right: 0.5rem;
+}
+
+/* certifications media queries */
+@media screen and (max-width: 600px) {
+  .certifications .box-container .box {
+    flex-direction: column;
+    width: 100%;
+  }
+  .certifications .box-container .box .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex: 0;
+  }
+}
+/* certifications section ends */
