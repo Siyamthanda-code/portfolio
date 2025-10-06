@@ -5,5 +5,6 @@
 - **Data Analysis**
 - **Systems Analysis**
 - **Web Development**
+- **Software Development**
 
 ![Cv Screenshot](CV.PNG)
