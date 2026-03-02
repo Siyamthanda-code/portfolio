@@ -1,6 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
+/* 1. Base Header Layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: #111; /* Dark background for contrast */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* 2. The Logo Styling */
+.logo {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Space between name and icon */
+    transition: 0.3s ease;
+}
+
+/* Gradient Text on Hover for the Name */
+.logo:hover {
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 3. The Code Icon Styling */
+.code-icon {
+    color: #00dbde; /* Bright Cyan */
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+    display: inline-block;
+}
+
+/* The "Dope" Interaction: Icon rotates and pulses on Logo Hover */
+.logo:hover .code-icon {
+    transform: rotate(360deg) scale(1.2);
+    color: #fc00ff; /* Matches the gradient end color */
+    text-shadow: 0 0 10px #fc00ff;
+}
+
+/* 4. Navigation & Menu (Basic styling for context) */
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00dbde;
+}
+
+/* Mobile Menu Icon */
+#menu {
+    font-size: 2rem;
+    color: #fff;
+    display: none; /* Hide on desktop, show via media query */
+    cursor: pointer;
+}
 * {
   margin: 0;
   padding: 0;
