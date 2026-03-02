@@ -1,10 +1,9 @@
 # SIYAMTHANDA AMAHLE BUTHELEZI
 ## My Online Curriculum Vitae
 ### Career Focus:
-- **Business Analysis**
 - **Data Analysis**
-- **Systems Analysis**
-- **Web Development**
+- **Data Engineering**
+- **Database Administration**
 - **Software Development**
 
 ![Cv Screenshot](CV.PNG)
