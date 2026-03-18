@@ -1,5 +1,5 @@
 # SIYAMTHANDA AMAHLE BUTHELEZI
-## My Online Curriculum Vitae
+## Web Curriculum Vitae
 ### Career Focus:
 - **Data Analysis**
 - **Data Engineering**
