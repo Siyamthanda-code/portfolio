@@ -627,6 +627,14 @@
             icon.classList.add('fa-moon');
         }
     }
+        // NEW: Mobile Menu Toggle Logic
+    const menu = document.getElementById('menu');
+    const navbar = document.querySelector('.navbar');
+
+    menu.addEventListener('click', () => {
+        navbar.classList.toggle('active'); // Adds or removes the 'active' class
+        menu.classList.toggle('fa-times'); // Toggles icon between bars and times (X)
+    });
 </script>
 
 </body>
