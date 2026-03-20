@@ -866,6 +866,43 @@ section {
 }
 
 /* ========================================== */
+/* FOOTER SOCIAL ICONS - HORIZONTAL FIX       */
+/* ========================================== */
+
+.footer .share {
+    list-style: none; /* Removes the bullet points */
+    padding: 1rem 0;
+    margin-top: 1rem;
+    display: flex; /* Forces the list items to sit side-by-side (horizontal) */
+    align-items: center;
+    gap: 1rem; /* Adds space between the icons */
+}
+
+.footer .share li {
+    margin: 0; /* Removes default margins */
+}
+
+.footer .share li a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    background: rgb(230, 230, 230);
+    color: #02094b;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.footer .share li a:hover {
+    background: transparent;
+    border: 0.1rem solid rgb(180, 178, 178);
+    color: #ffae00;
+    transform: scale(0.98);
+}
+
+/* ========================================== */
 /* 13. SCROLL TO TOP                          */
 /* ========================================== */
 #scroll-top {
