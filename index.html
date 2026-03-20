@@ -31,6 +31,11 @@
             <li><a href="#experience">Experience</a></li>
             </ul>
         </nav>
+        <!-- Dark Mode Toggle Button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+</header>
 </header>
 <!-- navbar ends -->
 
@@ -585,6 +590,44 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
+
+    <script>
+    // Dark Mode Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved user preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.setAttribute('data-theme', currentTheme);
+        updateIcon(currentTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const theme = body.getAttribute('data-theme');
+        
+        if (theme === 'dark') {
+            body.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            updateIcon('light');
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            updateIcon('dark');
+        }
+    });
+
+    function updateIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+</script>
 
 </body>
 </html>
