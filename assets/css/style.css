@@ -105,18 +105,40 @@ header {
   transition: background 0.3s ease;
 }
 
+/* 1. Logo Base Styling */
 header .logo {
-  font-size: 1.9rem;
-  font-weight: 800;
   text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem; /* Space between name and icon */
+  transition: 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
-header .logo i {
-  font-size: 2.2rem;
-}
+/* 2. Logo Hover Effect (Gradient Text) */
 header .logo:hover {
-  color: var(--accent-primary);
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3. The Code Icon Styling */
+header .logo .code-icon {
+  color: #00dbde; /* Bright Cyan */
+  font-size: 1.5rem;
+  transition: 0.5s ease;
+  display: inline-block;
+}
+
+/* 4. The "Dope" Interaction: Icon rotates on Logo Hover */
+header .logo:hover .code-icon {
+  transform: rotate(360deg) scale(1.2);
+  color: #fc00ff; /* Matches the gradient end color */
+  text-shadow: 0 0 10px #fc00ff;
 }
 
 /* Dark Mode Toggle Button */
