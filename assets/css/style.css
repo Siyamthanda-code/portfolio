@@ -922,168 +922,79 @@ section {
 }
 
 /* ========================================== */
-/* 14. MEDIA QUERIES (MOBILE RESPONSIVENESS)  */
+/* 13. MEDIA QUERIES (MOBILE RESPONSIVENESS)  */
 /* ========================================== */
 
-/* Hamburger Menu & Mobile Nav */
+/* Mobile Menu Logic */
 @media (max-width: 768px) {
-  #menu {
-    display: block;
-  }
+  #menu { display: block; } /* Show the hamburger icon */
+  
   header .navbar {
-    position: fixed;
-    top: 6.5rem;
-    right: -120%;
-    width: 75%;
-    height: 100%;
-    text-align: left;
-    align-items: flex-start;
-    background-color: var(--bg-header);
-    box-shadow: var(--shadow-medium);
+    position: fixed; top: 6.5rem; right: -120%; width: 75%; height: 100%;
+    text-align: left; align-items: flex-start;
+    background-color: var(--bg-header); /* Light/Dark mode aware */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     transition: right 0.3s ease;
   }
-  header .navbar.active {
-    right: 0;
-  }
-  header .navbar ul {
-    flex-flow: column;
-    padding: 1rem;
-    width: 100%;
-  }
-  header .navbar ul li {
-    text-align: center;
-    width: 100%;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    width: 26rem;
-  }
-  header .navbar ul li a {
-    display: block;
-    padding: 1rem;
-    text-align: left;
-    color: var(--text-primary);
-    font-size: 2rem;
-  }
-  header .navbar ul li a.active,
-  header .navbar ul li a:hover {
-    padding: 1rem;
-    color: #fff;
-    background: var(--accent-primary);
-    border-radius: 0.5rem;
-    border-bottom: none;
-  }
-  .fa-times {
-    transform: rotate(180deg);
-  }
+  header .navbar.active { right: 0; } /* Slide in effect */
+  header .navbar ul { flex-flow: column; padding: 1rem; width: 100%; }
+  header .navbar ul li { width: 100%; margin: 1rem 0; }
+  header .navbar ul li a { display: block; padding: 1rem; color: var(--text-primary); font-size: 2rem; }
+  header .navbar ul li a:hover { color: #fff; background: var(--accent-primary); border-bottom: none; }
 }
 
-/* Hero Mobile */
+/* Hero & General Mobile Fixes */
 @media (max-width: 450px) {
-  .home {
-    flex-flow: column-reverse;
-    padding: 2rem;
-    gap: 2rem;
-  }
-  .home .image img {
-    width: 90vw;
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-  .home .content {
-    text-align: center;
-  }
-  .home .content h2 {
-    font-size: 3rem;
-  }
-  .home .btn {
-    margin: 4rem 0;
-    position: relative;
-  }
-  .socials {
-    margin-top: 4rem;
-    text-align: center;
-  }
+  .home { flex-flow: column-reverse; padding: 2rem; gap: 2rem; }
+  .home .image img { width: 90vw; max-width: 300px; margin-left: 0; margin-top: 1rem; }
+  .home .content { text-align: center; }
+  .home .content h2 { font-size: 3rem; }
+  .socials { margin-top: 4rem; text-align: center; }
+  .heading { font-size: 2.5rem; }
 }
 
-/* About Mobile */
+/* About Section Mobile */
 @media screen and (max-width: 600px) {
-  .about .row {
-    flex-direction: column-reverse;
-    padding: 2rem;
-  }
-  .about .row .image img {
-    width: 100%;
-    height: auto;
-  }
-  .about .row .content {
-    padding: 1rem;
-  }
+  .about .row { flex-direction: column-reverse; padding: 2rem; }
+  .about .row .image img { width: 100%; max-width: 300px; }
 }
 
 /* Skills Mobile */
 @media screen and (max-width: 600px) {
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  .skills .container .row { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+/* Education & Certifications Mobile */
+@media screen and (max-width: 768px) {
+  .education .box-container .box, 
+  .certifications .box-container .box {
+    width: 95%; /* Make containers skinnier on mobile */
+    flex-direction: column; /* Stack image on top of text */
   }
-  .skills .container .bar .info span {
-    font-size: 1.5rem;
-  }
+  .education .box-container .box .image { height: 25rem; } /* Give image fixed height */
+  .education .box-container .box .content { padding: 1.5rem; }
 }
 
 /* Projects Mobile */
 @media screen and (max-width: 600px) {
-  .work .box-container {
-    grid-template-columns: 1fr;
-    margin: 1rem;
-  }
-  .work .box-container .box {
-    height: 40rem;
-  }
-  .work .desc .btns {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .work .desc .btns .btn {
-    width: 100%;
-    text-align: center;
-    margin-right: 0;
-  }
-}
-
-/* Education & Certifications Mobile */
-@media screen and (max-width: 600px) {
-  .education .box-container .box,
-  .certifications .box-container .box {
-    width: 100%;
-    flex-direction: column;
-  }
+  .work .box-container { grid-template-columns: 1fr; margin: 1rem; }
+  .work .desc .btns { flex-direction: column; gap: 1rem; }
+  .work .desc .btns .btn { width: 100%; text-align: center; margin-right: 0; }
 }
 
 /* Experience Timeline Mobile */
 @media screen and (max-width: 600px) {
-  .experience .timeline::after {
-    left: 31px;
-  }
-  .experience .container {
-    width: 100%;
-    padding-left: 7rem;
-    padding-right: 2rem;
-  }
-  .experience .container::after {
-    font-size: 2rem;
-    left: 11px;
-  }
-  .experience .container::before {
-    left: 61px;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #f68c09 transparent transparent;
-  }
-  .experience .left::after,
-  .experience .right::after {
-    left: 15px;
-  }
-  .experience .right {
-    left: 0%;
-  }
+  .experience .timeline::after { left: 31px; }
+  .experience .container { width: 100%; padding-left: 7rem; padding-right: 2rem; }
+  .experience .container::after { left: 11px; }
+  .experience .container::before { left: 61px; border-width: 10px 10px 10px 0; border-color: transparent #f68c09 transparent transparent; }
+  .experience .left::after, .experience .right::after { left: 15px; }
+  .experience .right { left: 0%; }
+}
+
+/* Footer Mobile */
+@media (max-width: 768px) {
+  .footer .box-container { flex-direction: column; align-items: center; text-align: center; }
+  .footer .box-container .box { text-align: center; margin: 1.5rem 0; }
+  .footer .share { justify-content: center; } /* Center icons on mobile */
 }
