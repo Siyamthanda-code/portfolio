@@ -9,4 +9,4 @@ I am a multi-disciplinary technologist specializing in the following areas:
 -   🗄️ **Database Administration**
 -   💻 **Software Development**
 
-![Cv Screenshot](CV.PNG)
+![Cv Screenshot](PORTFOLIO.png)
