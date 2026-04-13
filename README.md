@@ -7,6 +7,6 @@ I am a multi-disciplinary technologist specializing in the following areas:
 -   💾 **Data Analysis**
 -   ⚙️ **Data Engineering**
 -   🗄️ **Database Administration**
--   💻 **Software Development**
+-   💻 **Web Development**
 
 ![Cv Screenshot](PORTFOLIO.png)
